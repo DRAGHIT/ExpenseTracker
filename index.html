@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <section id="expense-section">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <input type="text" id="expense-category" placeholder="Category" required>
+                <button type="submit">Add Expense</button>
+            </form>
+            <div id="expense-log"></div>
+        </section>
+
+        <section id="currency-section">
+            <h2>Currency Converter USD to EUR/JPY/GPB</h2>
+            <input type="text" id="amount-to-convert" placeholder="Amount" required>
+            <select id="currency-select">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+            </select>
+            <button id="convert-button">Convert</button>
+            <div id="conversion-result"></div>
+        </section>
+
+        <canvas id="spendingChart" width="400" height="200"></canvas>
+    </div>
+    <div class="crypto-converter">
+        <select id="crypto-select">
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="USDT">Tether</option>
+            <option value="USDC">USD Coin</option>
+        </select>
+        <button id="get-crypto-button">Get Crypto Price</button>
+        <div id="crypto-price"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
